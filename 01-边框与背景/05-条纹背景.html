@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../common.css" />
+  </head>
+  <body>
+    <div class="outer">
+      <div class="enter">
+        <div class="bg"></div>
+      </div>
+    </div>
+
+    <style>
+      .outer {
+        width: 60%;
+        height: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 3px 1px #999;
+      }
+      .enter {
+        height: inherit;
+        background: rgba(255, 255, 255, 0.7);
+      }
+      .bg {
+        width: 55%;
+        height: inherit;
+        border-radius: 10px;
+        background: repeating-linear-gradient(
+          -45deg,
+          #345678 25%,
+          rgb(12, 162, 221) 0,
+          rgb(12, 162, 221) 50%,
+          #345678 0,
+          #345678 75%,
+          rgb(12, 162, 221) 0
+        );
+        background-size: 20px 20px;
+        animation: panoramic 20s linear infinite;
+      }
+      @keyframes panoramic {
+        to {
+          background-position: 200% 0;
+        }
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../common.css" />
+  </head>
+  <body>
+    <div>background-position</div>
+    <div>background-origin</div>
+    <div>calc</div>
+    <style>
+      div {
+        box-sizing: border-box;
+        color: #fff;
+        width: 220px;
+        height: 140px;
+        padding: 15px 0 0 20px;
+        background: seagreen url('../images/player_logo@2x.png') no-repeat
+          bottom right / 78px 21px;
+      }
+      div:nth-of-type(1) {
+        background-position: right 29px bottom 28px;
+      }
+      div:nth-of-type(2) {
+        background-origin: content-box;
+        padding-right: 29px;
+        padding-bottom: 28px;
+      }
+      div:nth-of-type(3) {
+        background-position: calc(100% - 29px) calc(100% - 28px);
+      }
+    </style>
+  </body>
+</html>
