@@ -8,13 +8,21 @@
     <link rel="stylesheet" href="../common.css" />
   </head>
   <body>
+    <!-- 进度条 -->
     <div class="outer">
       <div class="enter">
         <div class="bg"></div>
       </div>
     </div>
 
+    <!-- 优惠券卡片 -->
+    <div class="coupon-card">￥20 优惠<br />hover me</div>
+
     <style>
+      body {
+        flex-direction: column;
+      }
+
       .outer {
         width: 60%;
         height: 20px;
@@ -46,6 +54,28 @@
         to {
           background-position: 200% 0;
         }
+      }
+    </style>
+
+    <style>
+      .coupon-card {
+        cursor: pointer;
+        font-size: 2rem;
+        width: 13rem;
+        height: 16rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: radial-gradient(
+          circle at 100px -5px,
+          transparent 20px,
+          #fff 21px
+        );
+        transition: all 0.1s ease-out;
+      }
+      .coupon-card:hover {
+        transform: scale(1.01);
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.6));
       }
     </style>
   </body>
